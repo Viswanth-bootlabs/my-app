@@ -1,5 +1,6 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/sailor-321711/vaibhav/quickstart-image:tag1', '.' ]
-images:
-- 'us-west2-docker.pkg.dev/sailor-321711/quickstart-docker-repo/quickstart-image:tag1'
+- name: 'asia.gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'asia.gcr.io/sailor-321711/react-image:v1', '.' ]
+
+- name: 'asia.gcr.io/cloud-builders/docker'
+  args: ['push', 'asia.gcr.io/sailor-321711/react-image:v1']
