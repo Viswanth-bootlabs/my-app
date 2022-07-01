@@ -6,4 +6,4 @@ steps:
   args: ['push', 'gcr.io/sailor-321711/react-image:v1']
  
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: NONE
