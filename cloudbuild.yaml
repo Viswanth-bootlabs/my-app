@@ -3,7 +3,7 @@ steps:
   args: [ 'build', '-t', 'gcr.io-docker.pkg.dev/sailor-321711/react-image/react-image:v1', '.' ]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [docker tag react-image gcr.io/sailor-321711/react-image]
+  args: [ 'tag', 'react-image', 'gcr.io/sailor-321711/react-image:v1']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/sailor-321711/react-image:v1']
