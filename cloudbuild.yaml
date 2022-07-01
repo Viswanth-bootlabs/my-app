@@ -1,8 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/sailor-321711/react-image:v1', '.' ]
+  args: [ 'build', '-t', 'gcr.io-docker.pkg.dev/sailor-321711/react-image/react-image:v1', '.' ]
 
 - name: 'asia.gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/sailor-321711/react-image:v1']
-  options:
-    logging: NONE
+ 
+options:
+  logging: CLOUD_LOGGING_ONLY
